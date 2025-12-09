@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from restate.serde import DefaultSerde, Serde
 
 
-class BaseSettings(BaseModel):
+class WorkerSettings(BaseModel):
     identity_keys: list[str] = Field(default_factory=list)
 
 

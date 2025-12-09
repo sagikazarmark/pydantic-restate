@@ -1,7 +1,7 @@
-from .config import BaseSettings, ServiceHandlerOptions, ServiceOptions
+from .config import ServiceHandlerOptions, ServiceOptions, WorkerSettings
 
 __all__ = [
-    "BaseSettings",
     "ServiceHandlerOptions",
     "ServiceOptions",
+    "WorkerSettings",
 ]
