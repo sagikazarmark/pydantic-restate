@@ -1,6 +1,6 @@
 [project]
 name = "pydantic-restate"
-version = "0.0.0"
+version = "0.0.1"
 description = "Pydantic models for Restate"
 readme = "README.md"
 authors = [
