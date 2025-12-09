@@ -7,6 +7,10 @@ from pydantic import BaseModel, Field
 from restate.serde import DefaultSerde, Serde
 
 
+class BaseSettings(BaseModel):
+    identity_keys: list[str] = Field(default_factory=list)
+
+
 class BaseServiceOptions(BaseModel):
     metadata: Dict[str, str] | None = Field(
         default=None,
