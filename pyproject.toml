@@ -1,0 +1,29 @@
+[project]
+name = "pydantic-restate"
+version = "0.0.0"
+description = "Pydantic models for Restate"
+readme = "README.md"
+authors = [
+    { name = "Mark Sagi-Kazar", email = "mark.sagikazar@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.12.4",
+    "restate-sdk[serde]>=0.12.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.23,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [ "-v", "--tb=short" ]
